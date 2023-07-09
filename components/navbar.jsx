@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   Flex,
   Text,
@@ -25,7 +25,7 @@ const Navbar = () => {
   const { isOpen, onToggle } = useDisclosure();
   const focusBgColor = useColorModeValue("gray.300", "gray.700");
 
-  const navBgColor = useColorModeValue("white", "#efefef17");
+  const navBgColor = useColorModeValue("#ffffffb8", "#efefef17");
 
   const ColorModeToggle = () => {
     const { colorMode, toggleColorMode } = useColorMode();
@@ -52,10 +52,32 @@ const Navbar = () => {
     { name: "Sponsors", href: "#sponsors" },
   ];
 
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [visible, setVisible] = useState(true);
+
+  const handleScroll = () => {
+    const currentScrollPos = window.pageYOffset;
+
+    setVisible(prevScrollPos > currentScrollPos);
+    setPrevScrollPos(currentScrollPos);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const { colorMode, toggleColorMode } = useColorMode();
 
   return (
-    <Flex w="100%" justifyContent="center" my={"30px"}>
+    <Flex
+      w="100%"
+      justifyContent="center"
+      my={"30px"}
+      position={"fixed"}
+      zIndex={"999"}
+      display={{ base: visible ? "flex" : "none", xl: "flex" }} // Show on mobile, hide on xl screens
+    >
       {/* Mobile Drawer */}
       <Flex
         display={{ base: "flex", xl: "none" }} // Show on mobile, hide on xl screens
@@ -164,9 +186,9 @@ const Navbar = () => {
         h={16}
         alignItems="center"
         border="1px solid #ffffff17"
-        borderRadius={"25px"}
+        borderRadius={"18px"}
         justifyContent={"space-between"}
-        w={"60%"}
+        w={"80%"}
         px={"30px"}
         backdropFilter="blur(8px)"
         backgroundClip="padding-box"
