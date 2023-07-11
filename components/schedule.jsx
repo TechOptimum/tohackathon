@@ -12,7 +12,7 @@ import {
 
 const Schedule = () => {
   const { colorMode } = useColorMode();
-  const bgColor = { light: "gray.50", dark: "gray.800" };
+  const bgColor = { light: "#ffffff9a", dark: "#2d2d2db9" };
   const textColor = { light: "black", dark: "white" };
 
   const schedule = [

@@ -1,12 +1,5 @@
 import "@/styles/globals.css";
-import {
-  ChakraProvider,
-  CSSReset,
-  useColorMode,
-  IconButton,
-} from "@chakra-ui/react";
-
-import { MoonIcon, SunIcon } from "@chakra-ui/icons";
+import { ChakraProvider, CSSReset } from "@chakra-ui/react";
 
 import { theme } from "@/styles/theme";
 import Layout from "../../components/layout";

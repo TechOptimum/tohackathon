@@ -15,7 +15,6 @@ const theme = extendTheme({
   styles: {
     global: (props) => ({
       body: {
-        bg: useColorModeValue("#fdfdfc", "#252525"),
         fontFamily: "Darker Grotesque, sans-serif",
       },
     }),

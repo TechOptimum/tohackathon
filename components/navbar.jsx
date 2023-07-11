@@ -25,7 +25,7 @@ const Navbar = () => {
   const { isOpen, onToggle } = useDisclosure();
   const focusBgColor = useColorModeValue("gray.300", "gray.700");
 
-  const navBgColor = useColorModeValue("#ffffffb8", "#efefef17");
+  const navBgColor = useColorModeValue("#ffffff9c", "#efefef19");
 
   const ColorModeToggle = () => {
     const { colorMode, toggleColorMode } = useColorMode();
@@ -52,21 +52,6 @@ const Navbar = () => {
     { name: "Sponsors", href: "#sponsors" },
   ];
 
-  const [prevScrollPos, setPrevScrollPos] = useState(0);
-  const [visible, setVisible] = useState(true);
-
-  const handleScroll = () => {
-    const currentScrollPos = window.pageYOffset;
-
-    setVisible(prevScrollPos > currentScrollPos);
-    setPrevScrollPos(currentScrollPos);
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   const { colorMode, toggleColorMode } = useColorMode();
 
   return (
@@ -76,7 +61,6 @@ const Navbar = () => {
       my={"30px"}
       position={"fixed"}
       zIndex={"999"}
-      display={{ base: visible ? "flex" : "none", xl: "flex" }} // Show on mobile, hide on xl screens
     >
       {/* Mobile Drawer */}
       <Flex
@@ -116,7 +100,9 @@ const Navbar = () => {
       {/* Mobile Drawer Content */}
       <Drawer placement="right" onClose={onToggle} isOpen={isOpen}>
         <DrawerOverlay>
-          <DrawerContent>
+          <DrawerContent
+            bgGradient={`linear(-45deg, #3d89d52c, #797de823 50%, #ed4e862c)`}
+          >
             <DrawerCloseButton />
 
             <DrawerHeader>

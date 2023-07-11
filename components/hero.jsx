@@ -12,7 +12,10 @@ import {
   Stack,
   Tooltip,
 } from "@chakra-ui/react";
+
 import Navbar from "./navbar";
+import Countdown from "./countdown";
+
 import RegisterButton from "./Buttons/register";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 
@@ -61,7 +64,12 @@ const TimeDisplay = () => {
   // Display userStartTime and userEndTime
 
   return (
-    <Stack direction="row" h="90px" p={"1"} mt={"15px"}>
+    <Stack
+      direction="row"
+      h={{ base: "120px", lg: "100px" }}
+      p={"1"}
+      mt={"15px"}
+    >
       <Divider orientation="vertical" />
       <Stack direction={"column"}>
         <Text
@@ -74,11 +82,17 @@ const TimeDisplay = () => {
         <Tooltip
           placement={"bottom"}
           label="Times are adjusted to your timezone"
+          display={{ base: "none", lg: "flex" }}
+          mr={"40px"}
+          hasArrow
         >
-          <Text>
+          <Text fontSize={"22px"}>
             {userStartTime} - {userEndTime}
           </Text>
         </Tooltip>
+        <Text display={{ base: "block", lg: "none" }}>
+          Times adjusted to your timezone
+        </Text>
       </Stack>
     </Stack>
   );
@@ -97,6 +111,7 @@ export default function Hero() {
         position="relative"
         color="white"
         pt={{ base: "0px", lg: "100px" }} // Adjust the margin as desired
+        flexDirection={{ base: "column", lg: "row" }}
       >
         <Box pl={"150px"} position="relative" zIndex={1}>
           <Heading as="h1" size="3xl" fontFamily={"oxanium, cursive"}>
@@ -154,6 +169,14 @@ export default function Hero() {
           ></spline-viewer>
         </chakra.div>
       </Box>
+      <Stack pb={"200px"} justifyContent={"center"} alignItems={"center"}>
+        <Box
+          h={"2px"}
+          w={{ base: "250px", lg: "1200px" }}
+          bgColor={"#ffffff51"}
+        ></Box>
+        <Countdown />
+      </Stack>
     </>
   );
 }
