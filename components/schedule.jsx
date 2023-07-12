@@ -112,10 +112,10 @@ const Schedule = () => {
     <Box
       borderRadius={"lg"}
       margin="auto"
-      maxW="80%"
+      maxW={{ base: "97%", md: "80%"}}
       bgColor={bgColor[colorMode]}
       color={textColor[colorMode]}
-      p={5}
+      p={{ base: 1, md: 5 }}
     >
       <Text textAlign={"center"} fontSize="3xl" mb={5}>
         Schedule
@@ -123,21 +123,21 @@ const Schedule = () => {
       <Table variant="simple">
         <Thead>
           <Tr>
-            <Th>Day and Time</Th>
-            <Th>Event Name</Th>
-            <Th>Who's running it</Th>
+            <Th p={{ base: 3, md: 6 }}>Day and Time</Th>
+            <Th p={{ base: 3, md: 6 }}>Event Name</Th>
+            <Th p={{ base: 3, md: 6 }}>Who&apos;s running it</Th>
           </Tr>
         </Thead>
         <Tbody>
           {schedule.map((item, index) => (
             <Tr key={index}>
-              <Td>
+              <Td p={{ base: 3, md: 6 }}>
                 {item.day}
                 <br />
                 {item.time}
               </Td>
-              <Td>{item.event}</Td>
-              <Td>{item.leads}</Td>
+              <Td p={{ base: 3, md: 6 }}>{item.event}</Td>
+              <Td p={{ base: 3, md: 6 }}>{item.leads}</Td>
             </Tr>
           ))}
         </Tbody>
