@@ -66,7 +66,7 @@ const Navbar = () => {
       <Flex
         display={{ base: "flex", xl: "none" }} // Show on mobile, hide on xl screens
         justifyContent="space-between"
-        w={"60%"}
+        w={{ base: "95%", sm: "60%"}}
         px={"30px"}
         py={"10px"}
         backdropFilter="blur(8px)"

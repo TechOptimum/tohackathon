@@ -112,10 +112,10 @@ const Schedule = () => {
     <Box
       borderRadius={"lg"}
       margin="auto"
-      maxW="80%"
+      maxW={{ base: "97%", md: "80%"}}
       bgColor={bgColor[colorMode]}
       color={textColor[colorMode]}
-      p={5}
+      p={{ base: 1, md: 5 }}
     >
       <Text textAlign={"center"} fontSize="3xl" mb={5}>
         Schedule
@@ -125,7 +125,7 @@ const Schedule = () => {
           <Tr>
             <Th>Day and Time</Th>
             <Th>Event Name</Th>
-            <Th>Who's running it</Th>
+            <Th>Who&apos;s running it</Th>
           </Tr>
         </Thead>
         <Tbody>

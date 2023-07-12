@@ -104,17 +104,16 @@ export default function Hero() {
       <Navbar />
       <ImageBG />
       <Box
-        h={{ base: "100vh", lg: "100vh" }} // Adjust the height as desired
         display="flex"
         justifyContent="center"
         alignItems="center"
         position="relative"
         color="white"
-        pt={{ base: "0px", lg: "100px" }} // Adjust the margin as desired
+        pt={28} // Adjust the margin as desired
         flexDirection={{ base: "column", lg: "row" }}
       >
-        <Box pl={"150px"} position="relative" zIndex={1}>
-          <Heading as="h1" size="3xl" fontFamily={"oxanium, cursive"}>
+        <Box pl={{ base: "30px", lg: "150px" }} pr={{ base: "30px", lg: 0 }} position="relative" zIndex={1}>
+          <Heading as="h1" size={{base: "2xl", lg: "3xl"}} fontFamily={"oxanium, cursive"}>
             Tech Optimum Hacks
           </Heading>
           <chakra.span
@@ -127,11 +126,11 @@ export default function Hero() {
           >
             SZN 2
           </chakra.span>
-          <Text fontSize="xl" fontWeight="medium" w={"600px"} pl={1}>
+          <Text fontSize="xl" fontWeight="medium" maxW={"600px"} pl={1}>
             Code, collaborate, and innovate with fellow teen coders in an
             exhilarating weekend of hacking and unleashing your creativity.
           </Text>
-          <Flex pt={5} mb={2} gap={"10px"} alignItems={"center"}>
+          <Flex pt={5} mb={2} gap={{base: 0, sm: "10px"}} direction={{ base: "column", sm: "row" }} alignItems={"center"}>
             <RegisterButton />
             <Box w={"5px"} h={"20px"} color={"white"}></Box>
             <Button
@@ -154,8 +153,8 @@ export default function Hero() {
           {/* TIME */}
         </Box>
         <chakra.div
-          w="950px"
-          h={{ base: "400px", lg: "1000px" }} // Adjust the height as desired
+          h={"24rem"}
+          w={"24rem"}
           alignSelf="center"
           display={{ base: "none", lg: "block" }} // Hide on mobile
         >

@@ -33,7 +33,7 @@ const Countdown = () => {
     }, 1000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [countdownDate]);
 
   const times = [
     {
@@ -59,9 +59,9 @@ const Countdown = () => {
       {/* <Text fontSize="2xl" fontWeight="bold" mb={2}>
         Countdown
       </Text> */}
-      <Flex direction={"row"} gap={10} py={"25px"}>
+      <Flex direction={"row"} gap={{base: 5, sm: 10}} py={"25px"}>
         {times.map((time) => (
-          <Flex direction={"column"} alignItems={"center"}>
+          <Flex key={time.name} direction={"column"} alignItems={"center"}>
             <Text
               fontSize={"35px"}
               fontWeight={"700"}
