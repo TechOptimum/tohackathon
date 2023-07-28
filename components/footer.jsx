@@ -32,9 +32,12 @@ const Footer = () => {
         </Text>
 
         <Flex gap={"20px"} alignItems={"center"}>
-          <Link>Main Website</Link>
-          <Link>Dashboard</Link>
-
+          <Link href="https://techoptimum.org/" target="_blank">
+            Main Website
+          </Link>
+          <Link href="https://dashboard.techoptimum.org/" target="_blank">
+            Dashboard
+          </Link>
           <Link>Privacy Policy</Link>
         </Flex>
       </Flex>

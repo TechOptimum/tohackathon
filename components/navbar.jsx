@@ -44,6 +44,14 @@ const Navbar = () => {
 
   const router = useRouter();
 
+  const handleTwitchClick = () => {
+    window.open("https://www.twitch.tv/", "_blank");
+  };
+
+  const handleDiscordClick = () => {
+    window.open("https://www.techoptimum.org/discord", "_blank");
+  };
+
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "About", href: "#about" },
@@ -153,18 +161,13 @@ const Navbar = () => {
                   color="purple.400"
                   size={"sm"}
                 />
-                <Link
-                  href={"https://www.techoptimum.org/discord"}
-                  target="_blank"
-                >
-                  <IconButton
-                    icon={<FaDiscord />}
-                    aria-label="Discord"
-                    variant="ghost"
-                    color="#5865f2"
-                    size={"sm"}
-                  />
-                </Link>
+                <IconButton
+                  icon={<FaDiscord />}
+                  aria-label="Discord"
+                  variant="ghost"
+                  color="#5865f2"
+                  size={"sm"}
+                />
                 <ColorModeToggle />
               </HStack>
             </DrawerFooter>
@@ -227,6 +230,7 @@ const Navbar = () => {
             variant="ghost"
             color="purple.400"
             size={"sm"}
+            onClick={handleTwitchClick}
           />
           <IconButton
             icon={<FaDiscord />}
@@ -234,6 +238,7 @@ const Navbar = () => {
             variant="ghost"
             color="#5865f2"
             size={"sm"}
+            onClick={handleDiscordClick}
           />
           <ColorModeToggle />
         </HStack>
