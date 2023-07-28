@@ -13,6 +13,8 @@ import {
   Tooltip,
 } from "@chakra-ui/react";
 
+import Link from "next/link";
+
 import Navbar from "./navbar";
 import Countdown from "./countdown";
 
@@ -148,18 +150,20 @@ export default function Hero() {
           >
             <RegisterButton />
             <Box w={"5px"} h={"20px"} color={"white"}></Box>
-            <Button
-              h={"55px"}
-              // _hover={{ textDecoration: "underline", color: "blue.400" }}
-              variant={"ghost"}
-              _hover={{ bgColor: "#5865f23e" }}
-              rightIcon={<ArrowForwardIcon />}
-              fontSize={"22px"}
-              transition={"all 0.3s ease-in-out"}
-              color={useColorMode === "light" ? "white" : "white"}
-            >
-              Discord Server
-            </Button>
+            <Link href={"https://www.techoptimum.org/discord"} target="_blank">
+              <Button
+                h={"55px"}
+                // _hover={{ textDecoration: "underline", color: "blue.400" }}
+                variant={"ghost"}
+                _hover={{ bgColor: "#5865f23e" }}
+                rightIcon={<ArrowForwardIcon />}
+                fontSize={"22px"}
+                transition={"all 0.3s ease-in-out"}
+                color={useColorMode === "light" ? "white" : "white"}
+              >
+                Discord Server
+              </Button>
+            </Link>
           </Flex>
           {/* TIME */}
 

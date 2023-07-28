@@ -20,6 +20,7 @@ import {
 import { HamburgerIcon, CloseIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
 import { useRouter } from "next/router";
 import { FaDiscord, FaTwitch } from "react-icons/fa";
+import Link from "next/link";
 
 const Navbar = () => {
   const { isOpen, onToggle } = useDisclosure();
@@ -152,13 +153,18 @@ const Navbar = () => {
                   color="purple.400"
                   size={"sm"}
                 />
-                <IconButton
-                  icon={<FaDiscord />}
-                  aria-label="Discord"
-                  variant="ghost"
-                  color="#5865f2"
-                  size={"sm"}
-                />
+                <Link
+                  href={"https://www.techoptimum.org/discord"}
+                  target="_blank"
+                >
+                  <IconButton
+                    icon={<FaDiscord />}
+                    aria-label="Discord"
+                    variant="ghost"
+                    color="#5865f2"
+                    size={"sm"}
+                  />
+                </Link>
                 <ColorModeToggle />
               </HStack>
             </DrawerFooter>
