@@ -112,8 +112,17 @@ export default function Hero() {
         pt={28} // Adjust the margin as desired
         flexDirection={{ base: "column", lg: "row" }}
       >
-        <Box pl={{ base: "30px", lg: "150px" }} pr={{ base: "30px", lg: 0 }} position="relative" zIndex={1}>
-          <Heading as="h1" size={{base: "2xl", lg: "3xl"}} fontFamily={"oxanium, cursive"}>
+        <Box
+          pl={{ base: "30px", lg: "150px" }}
+          pr={{ base: "30px", lg: 0 }}
+          position="relative"
+          zIndex={1}
+        >
+          <Heading
+            as="h1"
+            size={{ base: "2xl", lg: "3xl" }}
+            fontFamily={"oxanium, cursive"}
+          >
             Tech Optimum Hacks
           </Heading>
           <chakra.span
@@ -130,7 +139,13 @@ export default function Hero() {
             Code, collaborate, and innovate with fellow teen coders in an
             exhilarating weekend of hacking and unleashing your creativity.
           </Text>
-          <Flex pt={5} mb={2} gap={{base: 0, sm: "10px"}} direction={{ base: "column", sm: "row" }} alignItems={"center"}>
+          <Flex
+            pt={5}
+            mb={2}
+            gap={{ base: 0, sm: "10px" }}
+            direction={{ base: "column", sm: "row" }}
+            alignItems={"center"}
+          >
             <RegisterButton />
             <Box w={"5px"} h={"20px"} color={"white"}></Box>
             <Button
@@ -158,10 +173,6 @@ export default function Hero() {
           alignSelf="center"
           display={{ base: "none", lg: "block" }} // Hide on mobile
         >
-          <script
-            type="module"
-            src="https://unpkg.com/@splinetool/viewer@0.9.379/build/spline-viewer.js"
-          ></script>
           <spline-viewer
             loading-anim
             url="https://prod.spline.design/9zAf2RbRCdNVXDrQ/scene.splinecode"

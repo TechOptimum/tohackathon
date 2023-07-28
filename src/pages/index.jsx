@@ -10,6 +10,7 @@ export default function Home() {
         <title>TO Hackathon</title>
         <meta name="description" content="Hackathon hosted by Tech Optimum" />
         <link rel="icon" href="/favicon.ico" />
+        {/* default to dark mode */}
       </Head>
       {/* SECTIONS */}
       <Hero />

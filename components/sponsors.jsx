@@ -16,6 +16,7 @@ const SponsorGrid = () => {
           src={sponsor.imageUrl}
           boxSize="100%"
           objectFit="contain"
+          alt="sponsor-image"
         />
       ))}
     </Grid>
