@@ -16,7 +16,6 @@ import {
   DrawerContent,
   DrawerCloseButton,
   Image,
-  Link,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
 import { useRouter } from "next/router";
