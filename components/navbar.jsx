@@ -16,11 +16,11 @@ import {
   DrawerContent,
   DrawerCloseButton,
   Image,
+  Link,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
 import { useRouter } from "next/router";
 import { FaDiscord, FaTwitch } from "react-icons/fa";
-import Link from "next/link";
 
 const Navbar = () => {
   const { isOpen, onToggle } = useDisclosure();
@@ -117,15 +117,17 @@ const Navbar = () => {
             <DrawerCloseButton />
 
             <DrawerHeader>
-              <Image
-                src="/TechOptimumLogo.png"
-                alt="Tech Optimum Logo"
-                boxSize="50px"
-                borderRadius={"full"}
-                width={"32px"}
-                height={"32px"}
-                mr={"10px"}
-              />
+              <Link href="https://www.techoptimum.org/">
+                <Image
+                  src="/TechOptimumLogo.png"
+                  alt="Tech Optimum Logo"
+                  boxSize="50px"
+                  borderRadius={"full"}
+                  width={"32px"}
+                  height={"32px"}
+                  mr={"10px"}
+                />
+              </Link>
             </DrawerHeader>
 
             <DrawerBody>
@@ -193,15 +195,17 @@ const Navbar = () => {
         boxShadow={"0 0 10px #00000017"}
       >
         <Flex alignItems={"center"}>
-          <Image
-            src="/TechOptimumLogo.png"
-            alt="Tech Optimum Logo"
-            boxSize="50px"
-            borderRadius={"full"}
-            width={"32px"}
-            height={"32px"}
-            mr={"10px"}
-          />
+          <Link href="https://www.techoptimum.org/">
+            <Image
+              src="/TechOptimumLogo.png"
+              alt="Tech Optimum Logo"
+              boxSize="50px"
+              borderRadius={"full"}
+              width={"32px"}
+              height={"32px"}
+              mr={"10px"}
+            />
+          </Link>
           <Text fontSize="lg" fontWeight="bold">
             Hacks SZN 2
           </Text>
