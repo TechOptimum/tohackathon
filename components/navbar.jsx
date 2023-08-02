@@ -16,6 +16,7 @@ import {
   DrawerContent,
   DrawerCloseButton,
   Image,
+  Link,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
 import { useRouter } from "next/router";
@@ -85,15 +86,17 @@ const Navbar = () => {
         boxShadow={"lg"}
       >
         <Flex alignItems={"center"}>
-          <Image
-            src="/TechOptimumLogo.png"
-            alt="Tech Optimum Logo"
-            boxSize="50px"
-            borderRadius={"full"}
-            width={"32px"}
-            height={"32px"}
-            mr={"10px"}
-          />
+          <Link href="https://www.techoptimum.org/">
+            <Image
+              src="/TechOptimumLogo.png"
+              alt="Tech Optimum Logo"
+              boxSize="50px"
+              borderRadius={"full"}
+              width={"32px"}
+              height={"32px"}
+              mr={"10px"}
+            />
+          </Link>
           <Text fontSize="lg" fontWeight="bold">
             Hacks SZN 2
           </Text>
