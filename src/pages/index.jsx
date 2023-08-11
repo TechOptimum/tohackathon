@@ -2,6 +2,7 @@ import Head from "next/head";
 import Hero from "../../components/hero";
 import Schedule from "../../components/schedule";
 import Faq from "../../components/faq";
+import SponsorGrid from "../../components/sponsors";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Hero />
       <Schedule />
       <Faq />
+      <SponsorGrid />
     </>
   );
 }

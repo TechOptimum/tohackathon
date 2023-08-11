@@ -20,6 +20,7 @@ import Countdown from "./countdown";
 
 import RegisterButton from "./Buttons/register";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
+import { useEffect, useState } from "react";
 
 const ImageBG = () => {
   return (
@@ -46,6 +47,14 @@ const TimeDisplay = () => {
   const startTime = new Date();
   startTime.setUTCHours(0, 0, 0, 0);
   startTime.setUTCHours(0); // Set the hour to 0 (midnight) in UTC
+
+  const [hydrated, setHydrated] = useState(false); //resolve React apps hydration
+  useEffect(() => {
+    setHydrated(true);
+  }, []);
+  if (!hydrated) {
+    return null;
+  }
 
   const endTime = new Date();
   endTime.setUTCHours(0, 0, 0, 0);
