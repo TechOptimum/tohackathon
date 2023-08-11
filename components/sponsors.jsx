@@ -35,9 +35,8 @@ const SponsorGrid = () => {
       </Center>
       <Grid templateColumns="repeat(4, 1fr)" gap={4}>
         {sponsors.map((sponsor) => (
-          <Link href={sponsor?.href} target="_blank">
+          <Link key={sponsor?.id} href={sponsor?.href} target="_blank">
             <Image
-              key={sponsor.id}
               src={sponsor.imageUrl}
               boxSize="100%"
               objectFit="contain"
