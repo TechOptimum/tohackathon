@@ -33,12 +33,21 @@ const SponsorGrid = () => {
       <Center mt={"100px"} mb={"25px"}>
         <Heading fontFamily={"oxanium, cursive"}>Sponsor</Heading>
       </Center>
-      <Grid templateColumns="repeat(4, 1fr)" gap={4}>
+      <Grid
+        templateColumns={{
+          xl: "repeat(8,1fr)",
+          md: "repeat(4,1fr)",
+          sm: "repeat(2,1fr)",
+        }}
+        gap={4}
+        style={{}}
+      >
         {sponsors.map((sponsor) => (
           <Link key={sponsor?.id} href={sponsor?.href} target="_blank">
             <Image
               src={sponsor.imageUrl}
-              boxSize="100%"
+              boxSize="80%"
+              margin="auto"
               objectFit="contain"
               alt="sponsor-image"
             />
