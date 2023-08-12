@@ -20,91 +20,86 @@ const Schedule = () => {
       day: "Friday",
       time: "5 PM - 5:30 PM",
       event: "Opening Ceremony",
-      leads: "Siddharth, Pranith, Adi, Arnav",
+      leads: "Siddharth, Pranith, Aditya",
     },
     {
       day: "Friday",
       time: "8 PM - 9 PM",
       event: "Workshop 1 | Padding v Margin",
-      leads: "Arnav",
+      leads: "Siddharth",
     },
     {
       day: "Friday",
       time: "9:30 PM - 10:30 PM",
-      event: "Bedwars Tourney (With Golden)",
-      leads: "Arnav and Adi",
+      event: "Bedwars Tourney",
+      leads: "Aditya",
     },
     {
       day: "Friday/Saturday",
       time: "10:30 PM - 9 AM",
-      event: "Code you mfs | Live Stream",
-      leads: "",
+      event: "Code | Live Stream on Twitch",
+      leads: "Aditya",
     },
     {
       day: "Saturday",
       time: "9:30 AM - 10:30 AM",
       event: "Workshop 2 | Intro to Next.js",
-      leads: "Siddharth",
+      leads: "Pranith & Siddharth",
     },
     {
       day: "Saturday",
       time: "10:30 AM - 1 PM",
-      event: "Coding time  | Live Stream",
-      leads: "",
+    event: "Code | Live Stream on Twitch",
+      leads: "Aditya",
     },
     {
       day: "Saturday",
       time: "1 PM - 2 PM",
       event: "Chess Tourney",
-      leads: "Adi",
+      leads: "Aditya",
     },
     {
       day: "Saturday",
       time: "2:30 PM - 3:30 PM",
-      event: "Workshop 3",
-      leads: "Another rando",
+      event: "Workshop 3 | TBD",
+      leads: "TBD",
     },
     {
       day: "Saturday",
       time: "4 PM - 5:30 PM",
       event: "Slides Karaoke",
-      leads: "Adi/Arnav",
+      leads: "Adityav",
     },
     {
       day: "Saturday",
       time: "6 PM - 7 PM",
-      event: "Workshop 4",
-      leads: "A third rando",
+      event: "Workshop 4 | TBD",
+      leads: "TBD",
     },
     {
       day: "Saturday",
       time: "7:30 PM - 9 PM",
       event: "Q&A",
-      leads: "All organizers",
+      leads: "Aditya, Siddharth, And Pranith",
     },
-    {
-      day: "Saturday/Sunday",
-      time: "9:30 PM - 8 AM",
-      event: "Finish up projects | Live Stream",
-      leads: "",
-    },
+  
     {
       day: "Sunday",
-      time: "8 AM - 8:15 AM",
+      time: "1 PM - 2 PM",
       event: "Grace period for submissions",
-      leads: "All organizers",
+     leads: "Aditya, Siddharth, And Pranith",
     },
     {
       day: "Sunday",
-      time: "8:15 AM - 1 PM",
+      time: "2:15 PM - 6 PM",
       event: "Judging Period",
       leads: "Judges",
     },
     {
       day: "Sunday",
-      time: "5 PM - 6 PM",
+      time: "7 PM",
       event: "Closing Ceremony",
-      leads: "Siddharth, Pranith, Adi, Arnav",
+      leads: "Siddharth, Pranith, Aditya",
     },
   ];
 
@@ -118,7 +113,7 @@ const Schedule = () => {
       p={{ base: 1, md: 5 }}
     >
       <Text textAlign={"center"} fontSize="3xl" mb={5}>
-        Schedule
+        Schedule (times are in EST)
       </Text>
       <Table variant="simple">
         <Thead>
