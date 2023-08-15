@@ -17,7 +17,9 @@ const Footer = () => {
   const bgColor = useColorModeValue("gray.200", "gray.800");
   const { colorMode, toggleColorMode } = useColorMode();
   const navLinks = [
-    { name: "Home", href: "/" },
+    { name: "Home", href: "/" }, 
+
+
     { name: "About", href: "#about" },
     { name: "Schedule", href: "#schedule" },
     { name: "Prizes", href: "#prizes" },

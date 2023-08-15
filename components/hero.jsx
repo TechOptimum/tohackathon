@@ -77,7 +77,7 @@ const TimeDisplay = () => {
           fontWeight={"700"}
           fontFamily={"oxanium, cursive"}
         >
-          August 18th - August 20th
+          August 25th - August 27th
         </Text>
         <Tooltip
           placement={"bottom"}

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Box, Text, Flex, Stack } from "@chakra-ui/react";
 
 const Countdown = () => {
-  const countdownDate = new Date("August 18, 2023 17:00:00 PST").getTime();
+  const countdownDate = new Date("August 25, 2023 17:00:00 PST").getTime();
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,
