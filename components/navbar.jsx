@@ -16,6 +16,7 @@ import {
   DrawerContent,
   DrawerCloseButton,
   Image,
+  Link,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
 import { useRouter } from "next/router";
@@ -43,6 +44,14 @@ const Navbar = () => {
 
   const router = useRouter();
 
+  const handleTwitchClick = () => {
+    window.open("https://www.twitch.tv/", "_blank");
+  };
+
+  const handleDiscordClick = () => {
+    window.open("https://www.techoptimum.org/discord", "_blank");
+  };
+
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "About", href: "#about" },
@@ -66,7 +75,7 @@ const Navbar = () => {
       <Flex
         display={{ base: "flex", xl: "none" }} // Show on mobile, hide on xl screens
         justifyContent="space-between"
-        w={{ base: "95%", sm: "60%"}}
+        w={{ base: "95%", sm: "60%" }}
         px={"30px"}
         py={"10px"}
         backdropFilter="blur(8px)"
@@ -76,15 +85,17 @@ const Navbar = () => {
         boxShadow={"lg"}
       >
         <Flex alignItems={"center"}>
-          <Image
-            src="/TechOptimumLogo.png"
-            alt="Tech Optimum Logo"
-            boxSize="50px"
-            borderRadius={"full"}
-            width={"32px"}
-            height={"32px"}
-            mr={"10px"}
-          />
+          <Link href="https://www.techoptimum.org/">
+            <Image
+              src="/TechOptimumLogo.png"
+              alt="Tech Optimum Logo"
+              boxSize="50px"
+              borderRadius={"full"}
+              width={"32px"}
+              height={"32px"}
+              mr={"10px"}
+            />
+          </Link>
           <Text fontSize="lg" fontWeight="bold">
             Hacks SZN 2
           </Text>
@@ -106,15 +117,17 @@ const Navbar = () => {
             <DrawerCloseButton />
 
             <DrawerHeader>
-              <Image
-                src="/TechOptimumLogo.png"
-                alt="Tech Optimum Logo"
-                boxSize="50px"
-                borderRadius={"full"}
-                width={"32px"}
-                height={"32px"}
-                mr={"10px"}
-              />
+              <Link href="https://www.techoptimum.org/">
+                <Image
+                  src="/TechOptimumLogo.png"
+                  alt="Tech Optimum Logo"
+                  boxSize="50px"
+                  borderRadius={"full"}
+                  width={"32px"}
+                  height={"32px"}
+                  mr={"10px"}
+                />
+              </Link>
             </DrawerHeader>
 
             <DrawerBody>
@@ -182,15 +195,17 @@ const Navbar = () => {
         boxShadow={"0 0 10px #00000017"}
       >
         <Flex alignItems={"center"}>
-          <Image
-            src="/TechOptimumLogo.png"
-            alt="Tech Optimum Logo"
-            boxSize="50px"
-            borderRadius={"full"}
-            width={"32px"}
-            height={"32px"}
-            mr={"10px"}
-          />
+          <Link href="https://www.techoptimum.org/">
+            <Image
+              src="/TechOptimumLogo.png"
+              alt="Tech Optimum Logo"
+              boxSize="50px"
+              borderRadius={"full"}
+              width={"32px"}
+              height={"32px"}
+              mr={"10px"}
+            />
+          </Link>
           <Text fontSize="lg" fontWeight="bold">
             Hacks SZN 2
           </Text>
@@ -221,6 +236,7 @@ const Navbar = () => {
             variant="ghost"
             color="purple.400"
             size={"sm"}
+            onClick={handleTwitchClick}
           />
           <IconButton
             icon={<FaDiscord />}
@@ -228,6 +244,7 @@ const Navbar = () => {
             variant="ghost"
             color="#5865f2"
             size={"sm"}
+            onClick={handleDiscordClick}
           />
           <ColorModeToggle />
         </HStack>

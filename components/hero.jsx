@@ -13,11 +13,14 @@ import {
   Tooltip,
 } from "@chakra-ui/react";
 
+import Link from "next/link";
+
 import Navbar from "./navbar";
 import Countdown from "./countdown";
 
 import RegisterButton from "./Buttons/register";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
+import { useEffect, useState } from "react";
 
 const ImageBG = () => {
   return (
@@ -44,6 +47,14 @@ const TimeDisplay = () => {
   const startTime = new Date();
   startTime.setUTCHours(0, 0, 0, 0);
   startTime.setUTCHours(0); // Set the hour to 0 (midnight) in UTC
+
+  const [hydrated, setHydrated] = useState(false); //resolve React apps hydration
+  useEffect(() => {
+    setHydrated(true);
+  }, []);
+  if (!hydrated) {
+    return null;
+  }
 
   const endTime = new Date();
   endTime.setUTCHours(0, 0, 0, 0);
@@ -112,8 +123,17 @@ export default function Hero() {
         pt={28} // Adjust the margin as desired
         flexDirection={{ base: "column", lg: "row" }}
       >
-        <Box pl={{ base: "30px", lg: "150px" }} pr={{ base: "30px", lg: 0 }} position="relative" zIndex={1}>
-          <Heading as="h1" size={{base: "2xl", lg: "3xl"}} fontFamily={"oxanium, cursive"}>
+        <Box
+          pl={{ base: "30px", lg: "150px" }}
+          pr={{ base: "30px", lg: 0 }}
+          position="relative"
+          zIndex={1}
+        >
+          <Heading
+            as="h1"
+            size={{ base: "2xl", lg: "3xl" }}
+            fontFamily={"oxanium, cursive"}
+          >
             Tech Optimum Hacks
           </Heading>
           <chakra.span
@@ -130,21 +150,29 @@ export default function Hero() {
             Code, collaborate, and innovate with fellow teen coders in an
             exhilarating weekend of hacking and unleashing your creativity.
           </Text>
-          <Flex pt={5} mb={2} gap={{base: 0, sm: "10px"}} direction={{ base: "column", sm: "row" }} alignItems={"center"}>
+          <Flex
+            pt={5}
+            mb={2}
+            gap={{ base: 0, sm: "10px" }}
+            direction={{ base: "column", sm: "row" }}
+            alignItems={"center"}
+          >
             <RegisterButton />
             <Box w={"5px"} h={"20px"} color={"white"}></Box>
-            <Button
-              h={"55px"}
-              // _hover={{ textDecoration: "underline", color: "blue.400" }}
-              variant={"ghost"}
-              _hover={{ bgColor: "#5865f23e" }}
-              rightIcon={<ArrowForwardIcon />}
-              fontSize={"22px"}
-              transition={"all 0.3s ease-in-out"}
-              color={useColorMode === "light" ? "white" : "white"}
-            >
-              Discord Server
-            </Button>
+            <Link href={"https://www.techoptimum.org/discord"} target="_blank">
+              <Button
+                h={"55px"}
+                // _hover={{ textDecoration: "underline", color: "blue.400" }}
+                variant={"ghost"}
+                _hover={{ bgColor: "#5865f23e" }}
+                rightIcon={<ArrowForwardIcon />}
+                fontSize={"22px"}
+                transition={"all 0.3s ease-in-out"}
+                color={useColorMode === "light" ? "white" : "white"}
+              >
+                Discord Server
+              </Button>
+            </Link>
           </Flex>
           {/* TIME */}
 
@@ -158,10 +186,6 @@ export default function Hero() {
           alignSelf="center"
           display={{ base: "none", lg: "block" }} // Hide on mobile
         >
-          <script
-            type="module"
-            src="https://unpkg.com/@splinetool/viewer@0.9.379/build/spline-viewer.js"
-          ></script>
           <spline-viewer
             loading-anim
             url="https://prod.spline.design/9zAf2RbRCdNVXDrQ/scene.splinecode"
