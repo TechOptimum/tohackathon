@@ -23,6 +23,11 @@ const sponsors = [
     imageUrl: "smileyface-transparent.jpg",
     href: "https://balsamiq.com/",
   },
+  {
+    id: 9,
+    imageUrl: "vue.png",
+    href: "https://vuejs.org/",
+  }
 
   // Add more sponsors as needed
 ];
