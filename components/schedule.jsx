@@ -20,13 +20,13 @@ const Schedule = () => {
       day: "Friday",
       time: "5 PM - 5:30 PM",
       event: "Opening Ceremony",
-      leads: "Siddharth, Pranith, Aditya",
+      leads: "Aditya, Siddharth, And Pranith",
     },
     {
       day: "Friday",
       time: "8 PM - 9 PM",
-      event: "Workshop 1 | Padding v Margin",
-      leads: "Siddharth",
+      event: "Workshop 1 | Intro to HTML and CSS",
+      leads: "Siddharth, Aditya",
     },
     {
       day: "Friday",
@@ -38,7 +38,7 @@ const Schedule = () => {
       day: "Friday/Saturday",
       time: "10:30 PM - 9 AM",
       event: "Code | Live Stream on Twitch",
-      leads: "Aditya",
+      leads: "Aditya, Siddharth, And Pranith",
     },
     {
       day: "Saturday",
@@ -49,8 +49,8 @@ const Schedule = () => {
     {
       day: "Saturday",
       time: "10:30 AM - 1 PM",
-    event: "Code | Live Stream on Twitch",
-      leads: "Aditya",
+      event: "Code | Live Stream on Twitch",
+      leads: "Aditya, Siddharth, And Pranith",
     },
     {
       day: "Saturday",
@@ -61,20 +61,14 @@ const Schedule = () => {
     {
       day: "Saturday",
       time: "2:30 PM - 3:30 PM",
-      event: "Workshop 3 | TBD",
-      leads: "TBD",
+      event: "Workshop 3 | OpenEnded Dashboard",
+      leads: "Siddharth",
     },
     {
       day: "Saturday",
-      time: "4 PM - 5:30 PM",
-      event: "Slides Karaoke",
-      leads: "Adityav",
-    },
-    {
-      day: "Saturday",
-      time: "6 PM - 7 PM",
-      event: "Workshop 4 | TBD",
-      leads: "TBD",
+      time: "4 PM - 7:30 PM",
+      event: "Code | Live Stream on Twitch",
+      leads: "Aditya, Siddharth, And Pranith",
     },
     {
       day: "Saturday",
@@ -82,12 +76,23 @@ const Schedule = () => {
       event: "Q&A",
       leads: "Aditya, Siddharth, And Pranith",
     },
-  
+    {
+      day: "Saturday",
+      time: "9:00 PM",
+      event: "Vue.js raffle",
+      leads: "Aditya, Siddharth, And Pranith",
+    },
+    {
+      day: "Saturday",
+      time: "9:00 PM - Sunday 1 PM",
+      event: "Code | Live Stream on Twitch",
+      leads: "Aditya, Siddharth, And Pranith",
+    },
     {
       day: "Sunday",
       time: "1 PM - 2 PM",
       event: "Grace period for submissions",
-     leads: "Aditya, Siddharth, And Pranith",
+      leads: "Aditya, Siddharth, And Pranith",
     },
     {
       day: "Sunday",
@@ -107,13 +112,19 @@ const Schedule = () => {
     <Box
       borderRadius={"lg"}
       margin="auto"
-      maxW={{ base: "97%", md: "80%"}}
+      maxW={{ base: "97%", md: "80%" }}
       bgColor={bgColor[colorMode]}
       color={textColor[colorMode]}
       p={{ base: 1, md: 5 }}
     >
-      <Text textAlign={"center"} fontSize="3xl" mb={5}>
-        Schedule (times are in EST)
+      <Text
+        id="schedule"
+        scrollMargin={"140px"}
+        textAlign={"center"}
+        fontSize="3xl"
+        mb={5}
+      >
+        Schedule (times are in PST)
       </Text>
       <Table variant="simple">
         <Thead>

@@ -35,7 +35,7 @@ const FAQSection = () => {
       <Center mt={"100px"} mb={"25px"}>
         <Heading fontFamily={"oxanium, cursive"}>FAQ</Heading>
       </Center>
-      <Box mx="auto" maxW="80%" mt={8} mb={10}>
+      <Box id={"faq"} mx="auto" maxW="80%" mt={8} mb={10}>
         <Accordion allowMultiple>
           {faqData.map((item, index) => (
             <AccordionItem my="1rem" border="none" key={index}>

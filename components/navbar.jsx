@@ -45,7 +45,7 @@ const Navbar = () => {
   const router = useRouter();
 
   const handleTwitchClick = () => {
-    window.open("https://www.twitch.tv/", "_blank");
+    window.open("https://www.twitch.tv/techoptimumhq", "_blank");
   };
 
   const handleDiscordClick = () => {
@@ -54,9 +54,12 @@ const Navbar = () => {
 
   const navLinks = [
     { name: "Home", href: "/" },
-    { name: "About", href: "#about" },
+    { name: "About", href: "https://techoptimum.org" },
     { name: "Schedule", href: "#schedule" },
-    { name: "Prizes", href: "#prizes" },
+    {
+      name: "Prizes",
+      href: "https://tech-optimum-hacks-2023.devpost.com/?ref_feature=challenge&ref_medium=discover#prizes",
+    },
     { name: "FAQ", href: "#faq" },
     { name: "Sponsors", href: "#sponsors" },
   ];
@@ -218,7 +221,7 @@ const Navbar = () => {
               variant="unstyled"
               color={colorMode === "light" ? "#2b6db1" : "#3399ff"}
               _hover={{ color: colorMode === "light" ? "#004182" : "#96c5f3" }}
-              _focus={{ bg: focusBgColor }}
+              _focus={{ bg: "none" }}
               isActive={router.pathname === link?.href}
               onClick={() => router.push(link?.href)}
               fontWeight={"700"}

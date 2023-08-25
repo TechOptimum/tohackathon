@@ -27,16 +27,23 @@ const sponsors = [
     id: 9,
     imageUrl: "vue.png",
     href: "https://vuejs.org/",
-  }
+  },
 
   // Add more sponsors as needed
 ];
 
 const SponsorGrid = () => {
   return (
-    <Box maxW={{ base: "97%", md: "80%" }} margin="auto" mb={"25px"}>
+    <Box
+      id={"sponsors"}
+      maxW={{ base: "97%", md: "80%" }}
+      margin="auto"
+      mb={"25px"}
+    >
       <Center mt={"100px"} mb={"25px"}>
-        <Heading fontFamily={"oxanium, cursive"}>Sponsor</Heading>
+        <Heading id={"sponsors"} fontFamily={"oxanium, cursive"}>
+          Sponsor
+        </Heading>
       </Center>
       <Grid
         templateColumns={{

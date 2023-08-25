@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { Box, Text, Flex, Stack } from "@chakra-ui/react";
+import { Box, Text, Flex, Center, useColorModeValue } from "@chakra-ui/react";
 
 const Countdown = () => {
-  const countdownDate = new Date("August 25, 2023 17:00:00 PST").getTime();
+  const countdownDate = new Date("August 25, 2023 15:50:30 PST").getTime();
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,
@@ -54,12 +54,15 @@ const Countdown = () => {
     },
   ];
 
+  const textColor = useColorModeValue("#fff", "#fff");
   return (
     <Box>
-      {/* <Text fontSize="2xl" fontWeight="bold" mb={2}>
-        Countdown
-      </Text> */}
-      <Flex direction={"row"} gap={{base: 5, sm: 10}} py={"25px"}>
+      <Center mt={"50px"}>
+        <Text fontSize="4xl" fontWeight="bold" mb={2} color={textColor}>
+          Opening Ceremony in
+        </Text>
+      </Center>
+      <Flex direction={"row"} gap={{ base: 5, sm: 10 }} py={"25px"}>
         {times.map((time) => (
           <Flex key={time.name} direction={"column"} alignItems={"center"}>
             <Text
